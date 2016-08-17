@@ -36,7 +36,7 @@ class EqualType extends AbstractType
      */
     public function __construct(TranslatorInterface $translator = null)
     {
-        // check if class is overloaded and notifiy about removing deprecated translator
+        // check if class is overloaded and notify about removing deprecated translator
         if ($translator !== null && get_class($this) !== get_class()) {
             @trigger_error('The translator dependency in Sonata`s EqualType is deprecated since 3.1 and will be removed in 4.0. Please prepare your dependencies for this change.', E_USER_DEPRECATED);
         }
